@@ -1,6 +1,8 @@
 import { Request, Response } from "express";
+const googleTranslateConfig = require("../config/config");
+
 const translateRoute = async (req: Request, res: Response) => {
-  const { text, targetLanguage } = req.query;
+  const { text, targetLanguage } = req.body;
   if (!text || !targetLanguage)
     return res.status(404).json({ message: "missing request elements" });
   try {
