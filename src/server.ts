@@ -1,7 +1,7 @@
-require("dotenv").config({ path: "/.env" });
+import dotenv from "dotenv";
 import express, { Request, Response } from "express";
-// const express = require("express");
 const app = express();
+dotenv.config();
 
 app.use([express.json(), express.urlencoded({ extended: true })]);
 
