@@ -21,6 +21,6 @@ npx tsc --init
 npx ts-node src/server.ts
 
 // with nodemon add the package.json dev script
-"dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts"
+"dev": "nodemon --watch src/**/*.ts --exec ts-node src/server.ts"
 
 ```
